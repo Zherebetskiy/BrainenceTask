@@ -8,18 +8,18 @@ namespace BrainenceTask.BusinessLogic
 {
     public class WordBL : IWordBL
     {
-        private WordContext context;
+        readonly IRepository repository;
         WordSearcher wordSearcher;
 
-        public WordBL()
+        public WordBL(IRepository repository)
         {
-            context = new WordContext();
+            this.repository = repository;
             wordSearcher = new WordSearcher();
         }
 
         public IEnumerable<SearchWord> Get()
         {
-            return context.Set<SearchWord>();
+            return repository.GetAll();
         }
 
         public void Save(string text, string word)
@@ -29,17 +29,17 @@ namespace BrainenceTask.BusinessLogic
 
             foreach (var entry in amountOfEntry.Keys)
             {
-                context.Set<SearchWord>().Add(
-                    new SearchWord
-                    {
-                        Word = word,
-                        Amount = amountOfEntry[entry],
-                        Sentence = Reverse(entry)
-                    }
+                repository.Create(
+                new SearchWord
+                {
+                    Word = word,
+                    Amount = amountOfEntry[entry],
+                    Sentence = Reverse(entry)
+                }
                     );
             }
 
-            context.SaveChanges();
+            repository.SaveChanges();
         }
 
         string Reverse(string text)

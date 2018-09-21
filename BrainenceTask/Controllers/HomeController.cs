@@ -21,7 +21,7 @@ namespace BrainenceTask.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddFile(IFormFile uploadedFile,[FromForm] string word)
+        public async Task<IActionResult> AddFile(IFormFile uploadedFile, string word)
         {
             var content = string.Empty;
             using (var reader = new StreamReader(uploadedFile.OpenReadStream()))
