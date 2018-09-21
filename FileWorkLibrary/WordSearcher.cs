@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace FileWorkLibrary
 {
-    class WordSearcher
+    public class WordSearcher
     {
         FileSplitter fileSplitter;
 

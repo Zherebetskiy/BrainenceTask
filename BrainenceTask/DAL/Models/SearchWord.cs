@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BrainenceTask.Models
+﻿namespace BrainenceTask.Models
 {
     public class SearchWord
     {
