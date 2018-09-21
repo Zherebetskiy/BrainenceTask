@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainenceTask", "BrainenceTask\BrainenceTask.csproj", "{CD3DF59C-22B9-4054-85C4-985F8B1DBEC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainenceTask", "BrainenceTask\BrainenceTask.csproj", "{CD3DF59C-22B9-4054-85C4-985F8B1DBEC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileWorkLibrary", "FileWorkLibrary\FileWorkLibrary.csproj", "{24D6FF02-CDF0-40B1-92F0-18A965584326}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CD3DF59C-22B9-4054-85C4-985F8B1DBEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD3DF59C-22B9-4054-85C4-985F8B1DBEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD3DF59C-22B9-4054-85C4-985F8B1DBEC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D6FF02-CDF0-40B1-92F0-18A965584326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D6FF02-CDF0-40B1-92F0-18A965584326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D6FF02-CDF0-40B1-92F0-18A965584326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D6FF02-CDF0-40B1-92F0-18A965584326}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
