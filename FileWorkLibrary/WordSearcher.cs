@@ -5,17 +5,11 @@ namespace FileWorkLibrary
 {
     public class WordSearcher
     {
-        FileSplitter fileSplitter;
-
-        public WordSearcher(string fileUrl)
-        {
-            fileSplitter = new FileSplitter(fileUrl);
-        }
+        string[] splitedText;
 
         public Dictionary<string,int> GetSentencesWithCurrentWord(string word)
         {
             Dictionary<string, int> amountOfEntry = new Dictionary<string, int>();
-            string[] splitedText = fileSplitter.GetSplitedTextBySentence();
 
             foreach (var sentence in splitedText)
             {
@@ -28,6 +22,11 @@ namespace FileWorkLibrary
             }
 
             return amountOfEntry;
+        }
+
+        public void SplitText(string text)
+        {
+            splitedText = text.Split('.');
         }
     }
 }

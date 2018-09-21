@@ -4,7 +4,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h2>Index</h2>
+<h3>Сhose file for upload.</h3>
+<form asp-action="AddFile" asp-controller="Home" method="post" enctype="multipart/form-data">
+    <input type="file" name="uploadedFile" /><br>
+    <input type ="text" name="word"/><br>
+    <input class="btn" type="submit" value="Search" />
+</form>
 
 <table class="table">
     <thead>
