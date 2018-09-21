@@ -7,7 +7,7 @@ namespace FileWorkLibrary
     {
         string[] splitedText;
 
-        public Dictionary<string,int> GetSentencesWithCurrentWord(string word)
+        public Dictionary<string, int> GetSentencesWithCurrentWord(string word)
         {
             Dictionary<string, int> amountOfEntry = new Dictionary<string, int>();
 
@@ -18,7 +18,7 @@ namespace FileWorkLibrary
                 if (amount != 0)
                 {
                     amountOfEntry.Add(sentence, amount);
-                } 
+                }
             }
 
             return amountOfEntry;

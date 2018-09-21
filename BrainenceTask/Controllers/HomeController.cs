@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BrainenceTask.BusinessLogic;
 using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace BrainenceTask.Controllers
@@ -21,7 +20,7 @@ namespace BrainenceTask.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddFile(IFormFile uploadedFile, string word)
+        public IActionResult AddFile(IFormFile uploadedFile, string word)
         {
             var content = string.Empty;
             using (var reader = new StreamReader(uploadedFile.OpenReadStream()))
@@ -29,7 +28,7 @@ namespace BrainenceTask.Controllers
                 content = reader.ReadToEnd();
             }
 
-            wordBL.Save(content,word);
+            wordBL.Save(content, word);
 
             return RedirectToAction("Index");
         }
